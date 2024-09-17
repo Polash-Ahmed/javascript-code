@@ -90,3 +90,14 @@ var str = 'this is a \tString '
 var str = 'this is a \\tString '
 
 console.log(str)
+
+// String Comparision
+
+var a = 'acLK'
+var b = 'HOns'
+console.log(a>b)
+
+
+
+
+console.log('1' == 1)
