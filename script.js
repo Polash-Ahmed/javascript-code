@@ -98,6 +98,25 @@ var b = 'HOns'
 console.log(a>b)
 
 
-
-
 console.log('1' == 1)
+
+// String Method
+
+var a = "I am";
+var b = "polash ahmed";
+
+var c = a.concat(' ',b);
+// var d = c.substring(11)
+// console.log(d)
+
+// console.log(c.charAt(10))
+
+console.log(c.startsWith('I'))
+console.log(c.endsWith('ahmed'))
+console.log('abc'.toUpperCase())
+console.log('ABC'.toLowerCase())
+console.log('    kjhgsa  '.trim()) 
+console.log(c.split(' '))
+
+
+
