@@ -63,3 +63,11 @@ for(; ;){
     console.log('You have got ' + rand)
   }
 }
+
+// String added
+var n = 10
+// var str = n + ''
+// var str = n.toString()
+var str = String(n)
+console.log(str)
+
