@@ -71,3 +71,22 @@ var n = 10
 var str = String(n)
 console.log(str)
 
+
+// Escape Notation
+
+// duble coder vitore single code
+var str = " this is a 'String'"
+
+// single coder vitore single code
+var str = 'this is a \'String\' '
+
+// new line
+var str = 'this is a \nString '
+
+// liner vito re tab
+var str = 'this is a \tString '
+
+// backslash er jonno
+var str = 'this is a \\tString '
+
+console.log(str)
