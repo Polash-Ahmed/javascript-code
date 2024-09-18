@@ -59,3 +59,17 @@ for(var i = 0; i<arr.length; i++){
     console.log('Element '+ i +': '+arr[i][j])
   }
 }
+
+// array last video
+var arr = [4,5,6,7,8]
+var arr2 = [4,52,63,74,85]
+
+console.log(arr.join(','))
+arr.fill(0)
+var arr3 = arr.concat(arr2)
+
+console.log(arr3)
+console.log(Array.isArray(arr))
+var arr2 = Array.from(arr)
+console.log(arr2)
+
