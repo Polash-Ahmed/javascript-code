@@ -84,3 +84,17 @@ if(obj1.a===obj2.a && obj1.b ===obj2.b){
 
 // console.log(obj1)
 console.log(JSON.stringify(obj1)===JSON.stringify(obj2))
+
+// Lterate Object Properties in Javascript
+var obj = {
+  x: 40,
+  y: 60,
+  z: 78,
+};
+// console.log('x' in obj)
+// console.log('b' in obj)
+
+for(var i in obj){
+  console.log(i)
+  console.log(i + ': '+obj[i])
+}
