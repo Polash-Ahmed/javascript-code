@@ -47,3 +47,15 @@ var arr = [1,2,3,4,5,6,7,8]
 arr.splice(3,1,44)
 console.log(arr)
 
+// Multi Dimensional Arrey
+
+var arr = [
+  [12,23,34,45,56],
+  [11,22,33,44,55],
+  [13,24,35,46,57]
+]
+for(var i = 0; i<arr.length; i++){
+  for(var j = 0; j<arr[i].length;j++){
+    console.log('Element '+ i +': '+arr[i][j])
+  }
+}
