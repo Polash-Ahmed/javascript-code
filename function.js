@@ -69,3 +69,56 @@ function addAll(){
 }
 addAll(1,2,3,4)
 addAll(6,7,9,9)
+
+
+
+
+
+// function test(){
+//   // console.log(arguments)
+//   for(var i = 0; i<arguments.length; i++){
+//     console.log(arguments[i])
+//   }
+// }
+// test(10, 20, 30)
+
+function addAll(){
+  var sum = 0
+  for (var i = 0; i <arguments.length; i++){
+    sum +=arguments[i]
+  }
+ return sum
+  // console.log('hello') not working
+}
+var result = addAll(1,2,3,4)
+console.log(result)
+
+// Function expression
+
+var addition = function(a,b){
+  return a+b
+}
+addition(10,20)
+
+setTimeout(function() {
+  console.log('i will call after 5 minutes')
+}, 5000);
+
+var another = addition
+console.log(another(7,8))
+
+
+// Inner function
+
+function something(greet, name){
+  function getFristName(){
+    if(name){
+      return name.split(' ')[0]
+    }else{
+      return ''
+    }
+  }
+  var message = greet + ' '+ getFristName()
+  console.log(message)
+}
+something("good morning", "polash ahmed")
