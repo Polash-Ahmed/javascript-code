@@ -122,3 +122,37 @@ function something(greet, name){
   console.log(message)
 }
 something("good morning", "polash ahmed")
+
+
+// Function scope
+
+
+var a = 20
+
+function hello(){
+  // var a = 12
+  function hello1(){
+    // var a = 15
+    console.log(a)
+  }
+ hello1()
+}
+
+hello()
+// Argument pass
+
+function test(n) {
+  function a() {
+    return n % 3 === 0;
+  }
+  function b() {
+    return n % 5 === 0;
+  }
+  if (a() && b()) {
+    console.log(n + " is divisable by both 3 and 5");
+  } else {
+    console.log("not a valid number");
+  }
+}
+test(15);
+
