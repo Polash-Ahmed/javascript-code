@@ -34,3 +34,33 @@ function printPoint(point){
 }
 printPoint(point)
 console.log(point)
+
+
+// Frist class function
+
+// Afunction can be stored in a Veriable
+function add(a, b) {
+  return a + b;
+}
+var sum = add;
+
+console.log(sum(2,3));
+
+// Afunction can be stored in an Array
+var arr = []
+arr.push(add)
+console.log(arr)
+console.log(arr[0](5,3))
+console.log(arr[0](5,4))
+
+// Afunction can be stored in an Object
+var obj = {
+  sum: add
+}
+console.log(obj)
+console.log(obj.sum(7, 9))
+
+// We can create function as need
+setTimeout(function() {
+  console.log('i have created...')
+}, 1000);
