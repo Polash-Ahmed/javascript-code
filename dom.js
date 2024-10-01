@@ -74,3 +74,23 @@ setTimeout(() => {
   list.lastChild.remove();
 }, 3000);
 
+
+// style dom
+
+// let title = document.getElementById('title')
+// title.style.color = 'green'
+
+// title.style.fontSize = '4rem'
+// title.style.background = '#000'
+
+let styleObj = {
+  background: 'green',
+  fontSize: '30px',
+  color: 'white'
+}
+
+
+let list = document.getElementById('list');
+
+[...list.children].forEach(li => Object.assign(li.style, styleObj))
+Object.assign(list.style, styleObj)
