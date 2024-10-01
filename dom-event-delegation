@@ -1,0 +1,86 @@
+// javascript code
+let btn = document.getElementById('btn')
+
+// btn.onclick = function(e){
+//   console.log(e)
+// }
+
+let list = document.getElementById('list')
+
+btn.addEventListener('click',function(e){
+ let item = list.lastElementChild.cloneNode(true)
+ item.innerHTML = 'Newly Created item'
+ list.appendChild(item)
+});
+
+// [...list.children].forEach(li =>{
+//   li.onclick = function(e){
+//     e.target.remove()
+//   }
+// })
+list.addEventListener('click',function(e){
+  if(this.contains(e.target)){
+    e.target.remove()
+  }
+})
+
+let box = document.getElementById('box');
+box.addEventListener('mousemove', function(e){
+  document.getElementById('x-value').innerHTML = e.offsetX
+  document.getElementById('y-value').innerHTML = e.offsetY
+
+})
+
+  // html code
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<div class="container">
+  <h1 id="title">Introduction to Dom</h1>
+  <ul id="list">
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+  </ul>
+  <button id="btn">Add</button>
+  <div id="box">
+    <p>(<span id="x-value">0</span>,<span id="y-value">0</span>)</p>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+  // css code
+
+  .container {
+  text-align: center;
+}
+.container > ul > li {
+  list-style-type: none;
+  background-color: antiquewhite;
+  margin-top: 10px;
+  padding: 10px;
+}
+.container > button {
+  background-color: greenyellow;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.container > #box {
+  background-color: skyblue;
+  padding: 20px;
+  width: 200px;
+  margin: 0 auto;
+}
