@@ -47,12 +47,23 @@ console.log(sum, max, min);
 
 // advance reduce
 
-const result = numbers.reduce((acc,cur,index)=>{
-  if(index === 0) acc += '[';
+const numbers = [1,2,3,4,5,false,NaN,'',7,9];
+
+
+// const result = numbers.reduce((acc,cur,index)=>{
+//   if(index === 0) acc += '[';
+//   if(cur){
+//     acc += cur.toString()+ (index < numbers.length-1 ? ', ':'');
+//   }
+//   if(index===numbers.length) acc+= ']';
+//   return acc;
+// }, '')
+// console.log(result)
+
+const result = numbers.reduce((acc,cur)=>{
   if(cur){
-    acc += cur.toString()+ (index < numbers.length-1 ? ', ':'');
+    acc.push(cur.toString())
   }
-  if(index===numbers.length) acc+= ']';
-  return acc;
-}, '')
+  return acc
+}, [])
 console.log(result)
