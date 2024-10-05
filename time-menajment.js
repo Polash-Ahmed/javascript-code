@@ -46,6 +46,27 @@ console.timeEnd("array");
 
 
 console.time("obj");
+
+// reduce
+
+const arr = [];
+for (let i = 1; i <= 5000000; i++) {
+  arr.push(i);
+}
+
+console.time('not-optimized')
+arr.filter(item => item%2===0).map(item => item*2)
+console.timeEnd('not-optimized')
+
+console.time("not-optimized");
+arr.reduce((acc, cur) => {
+  if (cur % 2 === 0) {
+    acc.push(cur * 2);
+  }
+  return acc;
+}, []);
+console.timeEnd("not-optimized");
+
 arrToObj[5000000] = {
   id: 5000000,
   value: 5000000,
